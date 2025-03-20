@@ -24,8 +24,8 @@ const SEO = props => {
   useEffect(() => {
     // 使用WebFontLoader字体加载
     loadExternalResource(
-      'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js',
-      'js'
+        'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js',
+        'js'
     ).then(url => {
       const WebFont = window?.WebFont
       if (WebFont) {
@@ -60,39 +60,39 @@ const SEO = props => {
   const BACKGROUND_DARK = siteConfig('BACKGROUND_DARK', '', NOTION_CONFIG)
 
   const SEO_BAIDU_SITE_VERIFICATION = siteConfig(
-    'SEO_BAIDU_SITE_VERIFICATION',
-    null,
-    NOTION_CONFIG
+      'SEO_BAIDU_SITE_VERIFICATION',
+      null,
+      NOTION_CONFIG
   )
 
   const SEO_GOOGLE_SITE_VERIFICATION = siteConfig(
-    'SEO_GOOGLE_SITE_VERIFICATION',
-    null,
-    NOTION_CONFIG
+      'SEO_GOOGLE_SITE_VERIFICATION',
+      null,
+      NOTION_CONFIG
   )
 
   const BLOG_FAVICON = siteConfig('BLOG_FAVICON', null, NOTION_CONFIG)
 
   const COMMENT_WEBMENTION_ENABLE = siteConfig(
-    'COMMENT_WEBMENTION_ENABLE',
-    null,
-    NOTION_CONFIG
+      'COMMENT_WEBMENTION_ENABLE',
+      null,
+      NOTION_CONFIG
   )
 
   const COMMENT_WEBMENTION_HOSTNAME = siteConfig(
-    'COMMENT_WEBMENTION_HOSTNAME',
-    null,
-    NOTION_CONFIG
+      'COMMENT_WEBMENTION_HOSTNAME',
+      null,
+      NOTION_CONFIG
   )
   const COMMENT_WEBMENTION_AUTH = siteConfig(
-    'COMMENT_WEBMENTION_AUTH',
-    null,
-    NOTION_CONFIG
+      'COMMENT_WEBMENTION_AUTH',
+      null,
+      NOTION_CONFIG
   )
   const ANALYTICS_BUSUANZI_ENABLE = siteConfig(
-    'ANALYTICS_BUSUANZI_ENABLE',
-    null,
-    NOTION_CONFIG
+      'ANALYTICS_BUSUANZI_ENABLE',
+      null,
+      NOTION_CONFIG
   )
 
   const FACEBOOK_PAGE = siteConfig('FACEBOOK_PAGE', null, NOTION_CONFIG)
@@ -103,7 +103,6 @@ const SEO = props => {
         <link rel='icon' href={favicon}/>
         <title>{title}</title>
         <meta name='theme-color' content={BACKGROUND_DARK}/>
-        <meta name="msvalidate.01" content="6BFDD8A06AB59C4C82E7D9C71B5DFCFD"/>
         <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0'
@@ -125,6 +124,7 @@ const SEO = props => {
         <meta name='keywords' content={keywords}/>
         <meta name='description' content={description}/>
         <meta property='og:locale' content={lang}/>
+        <meta name="msvalidate.01" content="6BFDD8A06AB59C4C82E7D9C71B5DFCFD"/>
         <meta property='og:title' content={title}/>
         <meta property='og:description' content={description}/>
         <meta property='og:url' content={url}/>
@@ -270,8 +270,8 @@ const getSEOMeta = (props, router, locale) => {
     default:
       return {
         title: post
-          ? `${post?.title} | ${siteInfo?.title}`
-          : `${siteInfo?.title} | loading`,
+            ? `${post?.title} | ${siteInfo?.title}`
+            : `${siteInfo?.title} | loading`,
         description: post?.summary,
         type: post?.type,
         slug: post?.slug,
