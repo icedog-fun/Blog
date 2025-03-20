@@ -102,6 +102,18 @@ const SEO = props => {
       <Head>
         <link rel='icon' href={favicon}/>
         <title>{title}</title>
+        <script type="text/javascript">
+          (function (c, l, a, r, i, t, y){
+          c[a] = c[a] || function () {
+            (c[a].q = c[a].q || []).push(arguments)
+          };
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })
+        (window, document, "clarity", "script", "qpl4w3wq9w"
+        )
+        ;
+        </script>
         <meta name='theme-color' content={BACKGROUND_DARK}/>
         <meta
             name='viewport'
@@ -175,7 +187,7 @@ const SEO = props => {
  * @param {*} router
  */
 const getSEOMeta = (props, router, locale) => {
-  const { post, siteInfo, tag, category, page } = props
+  const {post, siteInfo, tag, category, page} = props
   const keyword = router?.query?.s
 
   const TITLE = siteConfig('TITLE')
